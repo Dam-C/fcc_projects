@@ -1,0 +1,83 @@
+#quote-box {
+  border-radius: 5px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  box-sizing: border-box;
+  background-color: $quadruary;
+}
+
+#quote {
+  margin-bottom: 15px;
+  color: $primary;
+}
+
+.bottom-quote {
+  display: block;
+  text-align: right;
+  color: $primary;
+}
+
+#text {
+  color: $primary;
+  margin: 0;
+  font-size: 30px;
+  margin-bottom: 15px;
+  height: auto;
+}
+
+#author,
+#movie {
+  font-size: 13px;
+  margin: 0 0 15px 0;
+  text-align: right;
+}
+
+#btns {
+  display: flex;
+  justify-content: space-between;
+}
+#new-quote {
+  font-family: "Press Start 2P", cursive;
+
+  color: $ternary;
+  background-color: $primary;
+  border: none;
+  padding: 20px;
+}
+
+#new-quote:hover {
+  color: $quadruary;
+  background-color: $secondary;
+}
+#creator {
+  color: $quadruary;
+  margin: 15px;
+  text-align: center;
+}
+
+#socials {
+  display: flex;
+  gap: 10px;
+}
+
+#tweet-quote,
+#tumblr-quote {
+  color: $primary;
+  text-decoration: none;
+  background-color: $secondary;
+  color: $quadruary;
+  padding: 10px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#tweet-quote:hover,
+#tumblr-quote:hover {
+  color: $primary;
+  background-color: $secondary;
+  color: $quadruary;
+}
