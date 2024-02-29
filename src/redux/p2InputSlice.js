@@ -54,14 +54,18 @@ const inputSlice = createSlice({
   name: "input",
   initialState: {
     markdown: markdownBase,
+    display: true,
   },
   reducers: {
     updateInput: (state, action) => {
       state.markdown = action.payload;
     },
+    toggleInput: (state) => {
+      state.display = !state.display;
+    },
   },
 });
 
-export const { updateInput } = inputSlice.actions;
+export const { updateInput, toggleInput } = inputSlice.actions;
 
 export default inputSlice;

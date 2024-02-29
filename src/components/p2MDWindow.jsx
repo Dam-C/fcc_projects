@@ -1,11 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import * as act from "../redux/store";
-// import { toggleInput } from "../redux/windowSlice";
 import { marked } from "marked";
 
 const P2MDWindow = () => {
   const dispatch = useDispatch();
-  const global = useSelector((state) => state.window);
+  const displayPreview = useSelector((state) => state.window.display);
 
   marked.use({
     breaks: true,
@@ -13,30 +11,29 @@ const P2MDWindow = () => {
 
   const md = marked.parse(useSelector((state) => state.input.markdown));
 
+  const handleToggleWindow = () => {
+    dispatch({
+      type: "window/togglePreview",
+    });
+  };
+
   const getHtmlContent = () => {
     return { __html: marked.parse(md) };
   };
 
   return (
-    <section
-      className={
-        global.preview === true ? "preview-wrapper" : "preview-wrapper hide"
-      }
-    >
+    <section className="preview-wrapper">
       <div className="preview-top">
         <h2 className="top-title">preview</h2>
-        <i
-          className="hide-cross"
-          onClick={() =>
-            dispatch({
-              type: "window/togglePreview",
-            })
-          }
-        >
-          X
+        <i className="hide-cross" onClick={handleToggleWindow}>
+          {displayPreview ? "X" : "-"}
         </i>
       </div>
-      <div id="preview" dangerouslySetInnerHTML={getHtmlContent()} />
+      <div
+        id="preview"
+        dangerouslySetInnerHTML={getHtmlContent()}
+        className={displayPreview ? "" : "hide"}
+      />
     </section>
   );
 };

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 div,
@@ -218,6 +219,7 @@ table {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 800px;
 }
 
 .editor-wrapper {
@@ -279,6 +281,136 @@ table {
 code,
 pre {
   background-color: rgb(226, 199, 153);
+}
+
+#drum-machine {
+  padding: 30px;
+  margin: auto;
+  background-color: rgb(154, 59, 59);
+  display: flex;
+}
+
+#drum-display {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.drum-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.drum-pad {
+  width: 100px;
+  height: 80px;
+  color: rgb(154, 59, 59);
+  background-color: rgb(226, 199, 153);
+  border: 10px solid rgb(154, 59, 59);
+  box-shadow: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.drum-pad:hover {
+  border: 10px solid rgb(192, 130, 97);
+}
+
+.drum-settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  background-color: rgb(226, 199, 153);
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.on-off-btn {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  background-color: rgb(154, 59, 59);
+  cursor: pointer;
+}
+
+.on-btn,
+.off-btn {
+  width: 70px;
+  padding: 10px;
+  text-align: center;
+}
+
+.on-btn {
+  color: rgb(154, 59, 59);
+  background-color: greenyellow;
+}
+
+.off-btn {
+  color: rgb(242, 236, 190);
+  background-color: red;
+}
+
+.turn-off {
+  background-color: rgb(154, 59, 59);
+}
+
+.display-sound-name {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: rgb(242, 236, 190);
+  font-size: 0.9em;
+}
+
+.volume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.volumeDisplay {
+  background-color: rgb(154, 59, 59);
+  color: rgb(242, 236, 190);
+  padding: 10px;
+  width: 50px;
+  text-align: center;
+}
+
+input[type=range].customSlider {
+  -webkit-appearance: none;
+  padding: 0;
+  font: inherit;
+  outline: none;
+  color: black;
+  cursor: pointer;
+  background: rgb(242, 236, 190);
+}
+
+/* la zone de déplacement */
+input[type=range]::-webkit-slider-runnable-track {
+  height: 20px;
+  border: none;
+  border-radius: 0;
+  background-color: transparent; /* supprimé définie sur l'input */
+}
+
+/* le curseur */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* également nécessaire sur le curseur */
+  appearance: none;
+  margin-top: 0px; /* Centers thumb on the track */
+  background-color: rgb(154, 59, 59);
+  height: 20px;
+  width: 20px;
 }
 
 #calculator {

@@ -1,12 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
-import * as act from "../redux/store";
-// import { togglePreview } from "../redux/windowsSlice";
-// import { updateInput } from "../redux/inputSlice";
 
 const P2MDInput = () => {
   const dispatch = useDispatch();
-  const global = useSelector((state) => state.window);
   const mdInput = useSelector((state) => state.input);
+  const displayInput = useSelector((state) => state.input.display);
+
   const handleInputChange = (event) => {
     dispatch({
       type: "input/updateInput",
@@ -14,28 +12,23 @@ const P2MDInput = () => {
     });
   };
 
+  const handleToggleInput = () => {
+    dispatch({
+      type: "input/toggleInput",
+    });
+  };
+
   return (
-    <section
-      className={
-        global.input === true ? "editor-wrapper" : "editor-wrapper hide"
-      }
-    >
+    <section className="editor-wrapper">
       <div className="editor-top">
         <h2 className="top-title">editor</h2>
-        <i
-          className="hide-cross"
-          onClick={() =>
-            dispatch({
-              type: "window/togglePreview",
-            })
-          }
-        >
-          X
+        <i className="hide-cross" onClick={handleToggleInput}>
+          {displayInput ? "X" : "-"}
         </i>
       </div>
       <textarea
         id="editor"
-        className="editor-box"
+        className={displayInput ? "editor-box" : "editor-box hide"}
         onChange={handleInputChange}
         value={mdInput.markdown}
       />
