@@ -1,0 +1,65 @@
+.markdown-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.editor-wrapper {
+  width: 85%;
+}
+.preview-wrapper {
+  width: 90%;
+}
+.editor-wrapper,
+.preview-wrapper {
+  border: 10px solid $primary;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+.editor-top,
+.preview-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary;
+  color: $ternary;
+  padding: 10px;
+  height: 30px;
+}
+
+.hide-cross {
+  cursor: pointer;
+}
+
+.editor-box {
+  background-color: $quadruary;
+  height: 150px;
+  resize: vertical;
+  padding: 10px;
+}
+
+#preview {
+  font-family: monospace;
+  background-color: $quadruary;
+  color: black;
+  padding: 10px;
+  text-align: justify;
+  overflow: scroll;
+}
+
+#preview img {
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+code,
+pre {
+  background-color: $ternary;
+}

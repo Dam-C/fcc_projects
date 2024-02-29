@@ -1,9 +1,11 @@
+import * as comp from "../components/_compIndex";
+
 const Project2 = () => {
   return (
     <>
-      <section>
-        <h2>Projet 2</h2>
-        <p>Random quote</p>
+      <section className="markdown-wrapper">
+        <comp.P2MDInput />
+        <comp.P2MDWindow />
       </section>
     </>
   );

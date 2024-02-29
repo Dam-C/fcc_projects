@@ -1,11 +1,16 @@
 @import "./variables";
 @import "./reset";
 @import "./p1";
+@import "./p2";
+@import "./p4";
+
+html {
+  background-color: $ternary;
+}
 
 #root {
+  height: 100%;
   font-family: "Press Start 2P", cursive;
-  background-color: $ternary;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -36,12 +41,10 @@
 }
 
 .content {
-  width: 100vw;
   height: 100%;
   box-sizing: border-box;
-  padding: 0 30px;
+  padding: 30px 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 }

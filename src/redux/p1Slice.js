@@ -1,4 +1,4 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import db from "../data/p1_db.json";
 
 const possibleQuotes = db.length;
