@@ -1,5 +1,4 @@
 #quote-box {
-  border-radius: 5px;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -38,6 +37,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 #new-quote {
   font-family: "Press Start 2P", cursive;
 
@@ -80,4 +80,15 @@
   color: $primary;
   background-color: $secondary;
   color: $quadruary;
+}
+
+@media screen and (max-width: 750px) {
+  #quote-box {
+    width: auto;
+  }
+
+  #btns {
+    flex-direction: column;
+    gap: 20px;
+  }
 }

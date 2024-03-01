@@ -9,9 +9,6 @@ const Project4 = () => {
   return (
     <>
       <section>
-        <h2>Projet 4</h2>
-        <p>Random quote</p>
-
         <article id="calculator">
           <div id="full-display">{kalkulus}</div>
           <div id="display">{curr}</div>

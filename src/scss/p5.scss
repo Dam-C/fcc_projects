@@ -1,0 +1,148 @@
+#clock-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  border: 20px solid $primary;
+  background-color: $ternary;
+  color: $primary;
+  box-sizing: border-box;
+}
+
+#clock-title {
+  color: $secondary;
+  font-size: 1.8em;
+  margin-top: 20px;
+}
+
+#clock-settings {
+  display: flex;
+  gap: 30px;
+  background-color: $primary;
+  padding: 20px;
+}
+
+#break-settings,
+#session-settings,
+#clock-btns {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: $ternary;
+
+  gap: 30px;
+  padding: 20px;
+}
+
+#clock-btns {
+  margin-top: 20px;
+  width: 100%;
+  background-color: $primary;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.clockBTN {
+  border: none;
+  font-family: inherit;
+}
+
+#break-btns,
+#session-btns {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+#break-increment,
+#break-decrement,
+#session-decrement,
+#session-increment {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: center;
+  width: 50px;
+  height: 50px;
+  background-color: $ternary;
+  color: $primary;
+}
+
+#session {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+#session-length,
+#break-length {
+  font-size: 30px;
+  color: $ternary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#timer-label {
+  color: $secondary;
+}
+
+#time-left {
+  font-size: 1.7em;
+}
+
+#start_stop,
+#reset {
+  padding: 10px;
+  background-color: $ternary;
+  color: $primary;
+  cursor: pointer;
+  width: 200px;
+}
+
+#break-increment:hover,
+#break-decrement:hover,
+#session-decrement:hover,
+#session-increment:hover,
+#start_stop:hover,
+#reset:hover {
+  background-color: $secondary;
+  color: $quadruary;
+}
+
+@media screen and (max-width: 750px) {
+  #clock-wrapper {
+    gap: 20px;
+  }
+
+  #clock-title {
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+
+  #clock-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: $primary;
+    padding: 20px;
+  }
+
+  #clock-btns {
+    margin-top: 10px;
+    padding-top: 30px;
+  }
+
+  #timer-label {
+    color: $secondary;
+  }
+
+  #time-left {
+    font-size: 1.4em;
+  }
+}

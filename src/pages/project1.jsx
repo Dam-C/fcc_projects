@@ -3,11 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 const Project1 = () => {
   const dispatch = useDispatch();
   const newQuote = useSelector((state) => state.quote);
+
   return (
     <>
       <section>
-        <h2>Projet 1</h2>
-        <p>Random quote</p>
         <section id="quote-box">
           <article id="quote">
             <h1 id="text">

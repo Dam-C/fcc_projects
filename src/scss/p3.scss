@@ -1,5 +1,6 @@
 #drum-machine {
-  padding: 30px;
+  box-sizing: border-box;
+  padding: 15px;
   margin: auto;
   background-color: $primary;
   display: flex;
@@ -15,12 +16,12 @@
 .drum-board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 10px;
 }
 
 .drum-pad {
-  width: 100px;
-  height: 80px;
+  width: 80px;
+  height: 70px;
   color: $primary;
   background-color: $ternary;
   border: 10px solid $primary;
@@ -39,7 +40,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 300px;
+  width: 250px;
   background-color: $ternary;
   padding: 30px;
   box-sizing: border-box;
@@ -109,37 +110,41 @@ input[type="range"].customSlider {
   background: $quadruary;
 }
 
-/* la zone de déplacement */
 input[type="range"]::-webkit-slider-runnable-track {
   height: 20px;
   border: none;
   border-radius: 0;
-  background-color: transparent; /* supprimé définie sur l'input */
+  background-color: transparent;
 }
-/* le curseur */
+
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; /* également nécessaire sur le curseur */
+  -webkit-appearance: none;
   appearance: none;
-  margin-top: 0px; /* Centers thumb on the track */
+  margin-top: 0px;
   background-color: $primary;
   height: 20px;
   width: 20px;
 }
 
-// input[type="range"] {
-//   -webkit-appearance: none;
-//   appearance: none;
-//   background: transparent;
-//   background: $primary;
-//   cursor: pointer;
-// }
-
-// input[type="range"]::-webkit-slider-runnable-track {
-//   background: $primary;
-//   height: 1Opx;
-// }
-
-// input[type="range"]::-webkit-slider-thumb {
-//   width: 40px;
-//   color: $primary;
-// }
+@media screen and (max-width: 750px) {
+  #drum-display {
+    padding: 0;
+    flex-direction: column-reverse;
+  }
+  .drum-pad {
+    width: 60px;
+    height: 50px;
+    color: $primary;
+    background-color: $ternary;
+    border: 10px solid $primary;
+    box-shadow: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .drum-settings {
+    width: auto;
+    gap: 15px;
+  }
+}

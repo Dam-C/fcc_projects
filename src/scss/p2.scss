@@ -2,14 +2,17 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 800px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .editor-wrapper {
+  box-sizing: border-box;
   width: 85%;
 }
 
 .preview-wrapper {
+  box-sizing: border-box;
   width: 90%;
 }
 
@@ -64,4 +67,19 @@
 code,
 pre {
   background-color: $ternary;
+}
+
+@media screen {
+  .markdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .editor-wrapper,
+  .preview-wrapper {
+    width: 100%;
+    margin: 0;
+  }
 }
